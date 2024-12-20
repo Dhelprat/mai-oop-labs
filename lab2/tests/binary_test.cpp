@@ -22,8 +22,8 @@ TEST(BinaryTest, InitializerListConstructor) {
 Binary b{1, 0, 1, 1};
 EXPECT_EQ(b.size(), 4);
 EXPECT_EQ(b.at(0), 1);
-EXPECT_EQ(b.at(1), 0);
-EXPECT_EQ(b.at(2), 1);
+EXPECT_EQ(b.at(1), 1);
+EXPECT_EQ(b.at(2), 0);
 EXPECT_EQ(b.at(3), 1);
 }
 
@@ -51,7 +51,7 @@ EXPECT_EQ(b2.at(2), 1);
 // Тест оператора сложения
 TEST(BinaryTest, AdditionOperator) {
 Binary b1{1, 0, 1}; // 5
-Binary b2{0, 1, 1}; // 6
+Binary b2{1, 1, 0}; // 6
 Binary b3 = b1 + b2; // 11
 EXPECT_EQ(b3.size(), 4);
 EXPECT_EQ(b3.at(0), 1);
@@ -62,7 +62,7 @@ EXPECT_EQ(b3.at(3), 1);
 
 // Тест оператора вычитания
 TEST(BinaryTest, SubtractionOperator) {
-Binary b1{1, 1, 0, 1}; // 11
+Binary b1{1, 0, 1, 1}; // 11
 Binary b2{1, 0, 1};    // 5
 Binary b3 = b1 - b2;   // 6
 EXPECT_EQ(b3.size(), 3);
@@ -92,7 +92,7 @@ EXPECT_TRUE(b1 != b3);
 // Тест оператора сравнения "меньше"
 TEST(BinaryTest, LessThanOperator) {
 Binary b1{1, 0, 1}; // 5
-Binary b2{0, 1, 1}; // 6
+Binary b2{1, 1, 0}; // 6
 EXPECT_TRUE(b1 < b2);
 EXPECT_FALSE(b2 < b1);
 }
@@ -100,7 +100,7 @@ EXPECT_FALSE(b2 < b1);
 // Тест оператора сравнения "больше"
 TEST(BinaryTest, GreaterThanOperator) {
 Binary b1{1, 0, 1}; // 5
-Binary b2{0, 1, 1}; // 6
+Binary b2{1, 1, 0}; // 6
 EXPECT_FALSE(b1 > b2);
 EXPECT_TRUE(b2 > b1);
 }
@@ -108,7 +108,7 @@ EXPECT_TRUE(b2 > b1);
 // Тест оператора сравнения "меньше или равно"
 TEST(BinaryTest, LessThanOrEqualOperator) {
 Binary b1{1, 0, 1}; // 5
-Binary b2{0, 1, 1}; // 6
+Binary b2{1, 1, 0}; // 6
 EXPECT_TRUE(b1 <= b2);
 EXPECT_TRUE(b1 <= b1);
 }
@@ -116,7 +116,7 @@ EXPECT_TRUE(b1 <= b1);
 // Тест оператора сравнения "больше или равно"
 TEST(BinaryTest, GreaterThanOrEqualOperator) {
 Binary b1{1, 0, 1}; // 5
-Binary b2{0, 1, 1}; // 6
+Binary b2{1, 1, 0}; // 6
 EXPECT_FALSE(b1 >= b2);
 EXPECT_TRUE(b2 >= b1);
 EXPECT_TRUE(b1 >= b1);
