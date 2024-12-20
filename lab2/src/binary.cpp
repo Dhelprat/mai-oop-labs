@@ -1,4 +1,5 @@
 #include "../include/binary.h"
+#include <algorithm>
 
 // Конструктор по умолчанию
 Binary::Binary() : data(1, 0) {}
@@ -12,6 +13,7 @@ Binary::Binary(size_t size, unsigned char value) : data(size, value) {
 
 // Конструктор с initializer_list
 Binary::Binary(const std::initializer_list<unsigned char>& list) : data(list) {
+    std::reverse(data.begin(), data.end());
     for (unsigned char val : list) {
         if (val > 1) {
             throw std::invalid_argument("Value must be 0 or 1");
