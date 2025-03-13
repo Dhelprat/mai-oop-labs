@@ -1,0 +1,5 @@
+if(EXISTS "/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-4/build/runTests[1]_tests.cmake")
+  include("/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-4/build/runTests[1]_tests.cmake")
+else()
+  add_test(runTests_NOT_BUILT runTests_NOT_BUILT)
+endif()

@@ -1,0 +1,5 @@
+/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-3/build/CMakeFiles/program.dir
+/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-3/build/CMakeFiles/runTests.dir
+/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-3/build/CMakeFiles/test.dir
+/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-3/build/CMakeFiles/edit_cache.dir
+/Users/dhelprat/CLionProjects/borisov/cpp-workshop/lab-3/build/CMakeFiles/rebuild_cache.dir
